@@ -1,3 +1,6 @@
 export const environment = {
-  production: true
+  production: true,
+  accuWeather: {
+    apiKey: '8GFFFRBk7iTkxJZZPymc96xXNJbfWJ2K'
+  }
 };

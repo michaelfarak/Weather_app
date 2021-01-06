@@ -4,7 +4,7 @@ import {of} from 'rxjs';
 import {environment} from '../../environments/environment';
 import {catchError, map, tap} from 'rxjs/operators';
 
-const CURRENT_WEATHER_URL = 'http://dataservice.accuweather.com/currentconditions/v1/';
+const CURRENT_WEATHER_URL = 'https://dataservice.accuweather.com/currentconditions/v1/';
 
 @Injectable({
   providedIn: 'root'

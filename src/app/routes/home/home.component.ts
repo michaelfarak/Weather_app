@@ -126,11 +126,8 @@ export class HomeComponent implements OnInit {
 
   clickedLocation = location => {
     this.currentLocation = location.item;
-    console.log(this.currentLocation);
     const locationObject = this.selectedLocation.find(cityObject  => cityObject.name === this.currentLocation);
     this.locationKey = locationObject.key;
-    console.log(locationObject);
-    console.log(this.locationKey);
     this.getCurrentWeather(this.locationKey);
     this.getForecastWeather(this.locationKey);
   }

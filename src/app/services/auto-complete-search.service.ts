@@ -5,7 +5,7 @@ import {catchError, map} from 'rxjs/operators';
 import {environment} from '../../environments/environment';
 
 
-const AUTOCOMPLETE_URL = 'http://dataservice.accuweather.com/locations/v1/cities/autocomplete';
+const AUTOCOMPLETE_URL = 'https://dataservice.accuweather.com/locations/v1/cities/autocomplete';
 
 @Injectable({
   providedIn: 'root'

@@ -29,14 +29,12 @@ export class FavoritesStateService extends StateService<FavoritesState>{
 
   selectFavorite = (favorite: Favorite) => {
     this.setState({...this.state.selectedFavorite, selectedFavorite: favorite});
-    console.log(this.state.selectedFavorite);
   }
 
   addToFavorites = (favorite: Favorite) => {
     this.setState({
       favorites: [...this.state.favorites, favorite]
     });
-    console.log('favorite added');
   }
 
   removeFromFavorites = (favorite: Favorite, id: number) => {
@@ -44,7 +42,6 @@ export class FavoritesStateService extends StateService<FavoritesState>{
       favorites: [...this.state.favorites.filter(() => favorite.id !== id)]
     });
     this.setState({...this.state.selectedFavorite, selectedFavorite: undefined})
-    console.log('favorite removed');
   }
 
   getFavoritesList = () => this.state.favorites;
