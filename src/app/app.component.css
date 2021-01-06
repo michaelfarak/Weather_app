@@ -1,0 +1,30 @@
+@media only screen and (max-width: 500px){
+  .app-title{
+    font-size: 6vw!important;
+  }
+  .navbar-items {
+    font-size: 2vh!important;
+  }
+}
+
+.navBarHeader{
+  box-shadow: 10px 10px 43px -18px rgba(0, 0, 0, 0.75);
+  height: 7vh;
+}
+
+:host {
+  background-image: url("~src/assets/pics/weather_layers.jpg");
+  display: block;
+  background-size: cover;
+  height: 100vh;
+}
+
+.app-title {
+  font-size: 5vh;
+  color: white;
+}
+
+.navbar-items {
+  align-items: center;
+  font-size: 3vh;
+}

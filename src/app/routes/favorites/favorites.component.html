@@ -1,0 +1,16 @@
+<h1 class="favorites-title">Here is your list of favorite cities</h1>
+
+<div class="container favorite-section ">
+  <mat-slide-toggle (change)="toggleMetric()">{{temperatureMetric}}</mat-slide-toggle>
+  <div class="row d-flex flex-row">
+    <div *ngFor="let favorite of favorites" class="col-2 favorite-card card d-flex flex-column justify-content-around m-1"
+         (click)="focusFavorite(favorite)" style="border: 1px solid blue">
+      <div>{{favorite.name}}</div>
+      <div>{{favorite.currentWeather.weatherText}}</div>
+      <div>{{(temperatureMetric === 'celsius') ? (favorite.currentWeather.temperature + '&deg; c'): (favorite.currentWeather.temperature | temperatureConverter: 'F') + '&deg; F'}}</div>
+    </div>
+  </div>
+</div>
+<p *ngIf="!favorites.length" class="no-fav-text">Oups... It seems like you didn't select any city to favorites yet, go back to main page</p>
+
+
